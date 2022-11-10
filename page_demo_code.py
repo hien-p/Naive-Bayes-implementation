@@ -310,7 +310,7 @@ with code_col:
             iris_df.target.replace({0: 'setosa', 1: 'versicolor', 2: 'virginica'}, inplace=True)
 
             # Split the data
-            iris_features_train, iris_features_test, iris_species_train, iris_species_test = train_test_split(iris_df.data, iris_df.target, train_size=0.6, shuffle=True, random_state=42)
+            iris_features_train, iris_features_test, iris_species_train, iris_species_test = train_test_split(iris_df.data, iris_df.target, test_size=0.2, shuffle=True, random_state=42)
 
             # Instantiate a classifier
             classifier = GaussianNB()
@@ -343,7 +343,7 @@ if run_button:
     iris_df.target.replace({0: 'setosa', 1: 'versicolor', 2: 'virginica'}, inplace=True)
     
     iris_features_train, iris_features_test, iris_species_train, iris_species_test \
-        = train_test_split(iris_df.data, iris_df.target, train_size=0.2, shuffle=True, random_state=42)
+        = train_test_split(iris_df.data, iris_df.target, test_size=0.2, shuffle=True, random_state=42)
 
     
     classifier = GaussianNB()
