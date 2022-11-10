@@ -350,7 +350,7 @@ if run_button:
     y_pred = classifier_mul.predict(iris_features_test)
    
     with output_col1:
-        st.write(f'**Classifier accuracy:**,'classifier.score(iris_features_test, iris_species_test))
+        st.write('**Classifier accuracy:**',classifier.score(iris_features_test, iris_species_test))
         st.markdown("---")
         st.write("accuracy_score of BernoulliNB",classifier_ber.score(iris_features_test, iris_species_test))
         st.markdown("---")
